@@ -1,0 +1,24 @@
+{
+  "name": "background-services",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon dist/server.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "James Karomo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "mssql": "^10.0.2",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/mssql": "^9.1.5",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^6.4.15"
+  }
+}

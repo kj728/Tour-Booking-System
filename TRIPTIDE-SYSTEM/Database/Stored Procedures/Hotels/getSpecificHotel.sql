@@ -1,0 +1,8 @@
+USE TRIPTIDE;
+GO
+CREATE OR ALTER PROCEDURE getSpecificHotel(@id VARCHAR(255))
+AS
+BEGIN
+SELECT * FROM hotels WHERE id = @id;
+END
+

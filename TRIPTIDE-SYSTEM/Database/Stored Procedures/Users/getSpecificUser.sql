@@ -1,0 +1,7 @@
+USE TRIPTIDE;
+GO
+CREATE OR ALTER PROCEDURE getSpecificUser(@id VARCHAR(255))
+AS
+BEGIN
+    SELECT * FROM users WHERE id = @id
+END

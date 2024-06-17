@@ -1,0 +1,8 @@
+USE TRIPTIDE;
+GO
+
+CREATE OR ALTER PROCEDURE getSpecificTour(@id VARCHAR(255))
+AS
+BEGIN
+    SELECT * FROM tours WHERE id = @id;
+END

@@ -1,0 +1,30 @@
+{
+  "name": "trip-tide-node",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon dist/server.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "James Karomo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/concurrently": "^7.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/mssql": "^9.1.5",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.1",
+    "mssql": "^10.0.2",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/joi": "^17.2.3",
+    "@types/uuid": "^9.0.8"
+  }
+}

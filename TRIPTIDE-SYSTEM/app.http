@@ -1,0 +1,214 @@
+
+# USER REQUESTS START HERE
+
+#GET USERS
+GET  http://localhost:1000/auth/allusers
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+
+#####
+#USER SIGN UP
+POST  http://localhost:1000/auth/signup
+Content-Type: application/json
+
+{
+    "username": "James2",
+    "uemail": "james2@gmail.com",
+    "upassword": "James2@123"
+   
+}
+
+#####
+#GET SPECIFIC USER
+GET  http://localhost:1000/auth/ec6844d3-b9a3-49cc-9c89-58a3b2aa3b35
+
+
+#####
+#UPDATE USER
+
+PATCH   http://localhost:1000/auth/36f5ac4e-21fd-4b84-b181-1677676f6f4d
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+Content-Type: application/json
+
+{
+    "username": "Wambui",
+    "uemail": "wambui@gmail.com",
+    "upassword": "Wambui@123"
+   
+}
+
+#####
+#DELETE USER
+
+DELETE  http://localhost:1000/auth/36f5ac4e-21fd-4b84-b181-1677676f6f4d
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+#####
+#SIGN IN USER
+POST  http://localhost:1000/auth/signin/ec6844d3-b9a3-49cc-9c89-58a3b2aa3b35
+Content-Type: application/json
+
+{
+    "username": "James",
+    "uemail": "james@gmail.com",
+    "upassword": "James@123"
+     
+}
+
+######
+#================================================================================================
+#HOTELS REQUESTS BEGIN HERE
+#GET ALL HOTELS
+GET  http://localhost:1000/hotels
+
+#####
+#CREATE HOTEL
+
+POST  http://localhost:1000/hotels
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+Content-Type: application/json
+
+{
+    "hotelname": "Sarova Logde5",
+    "hotellocation": "Maasai Mara5",
+    "hotelrating": 5
+}
+
+#####
+#GET SPECIFIC HOTEL
+GET  http://localhost:1000/hotels/1bed43c4-929c-4687-b640-54eee8c4ec93
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+#####
+#UPDATE HOTEL
+
+PATCH   http://localhost:1000/hotels/1bed43c4-929c-4687-b640-54eee8c4ec93
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+Content-Type: application/json
+
+{
+    "hotelname": "Mara Lodge",
+    "hotellocation": "Maasai Mara",
+    "hotelrating": 5
+}
+
+#####
+#DELETE HOTEL
+
+DELETE  http://localhost:1000/hotels/1bed43c4-929c-4687-b640-54eee8c4ec93
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+######
+#================================================================================================
+#TOURS REQUESTS BEGIN HERE
+#GET ALL TOURS
+
+GET  http://localhost:1000/tours
+
+#####
+#CREATE TOUR
+
+POST  http://localhost:1000/tours
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+Content-Type: application/json
+
+{
+    "tourname": "Lake Nakuru",
+    "tdestination": "Nakuru",
+    "tdescription": "Best of Nakuru",
+    "tprice": 15000
+}
+
+#####
+#GET SPECIFIC TOUR
+
+GET  http://localhost:1000/tours/0b8e5753-8821-4316-baf8-dbb21910d245
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+#####
+#UPDATE TOUR
+
+PATCH   http://localhost:1000/tours/0b8e5753-8821-4316-baf8-dbb21910d245
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+Content-Type: application/json
+
+{
+    "tourname": "Lake Naivasha",
+    "tdestination": "Naivasha",
+    "tdescription": "Best of Naivasha...",
+    "tprice": 15000
+}
+
+#####
+#DELETE TOUR
+
+DELETE  http://localhost:1000/tours/f7449eb1-5099-4550-94eb-48e7973fb2e7
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+######
+#================================================================================================
+#BOOKING REQUESTS BEGIN HERE
+
+#GET ALL BOOKINGS
+
+GET  http://localhost:1000/bookings
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+#####
+#CREATE BOOKING
+
+POST  http://localhost:1000/bookings
+Content-Type: application/json
+
+{
+    "userid": "13fac29e-f4b3-4cf2-b6cc-c1f174abae65",
+    "tourid": "0b8e5753-8821-4316-baf8-dbb21910d245",
+    "hotelid": "9279b14f-9e1b-4709-852a-025b807c0251",
+    "bstartdate": "2024-06-20",
+    "benddate": "2024-06-30",
+    "bookingdate": "2024-06-17",
+    "bguests": 2,
+    "bstatus": "Pending",
+    "bEmailSent": 0
+}
+
+#####
+#GET SPECIFIC BOOKING
+
+GET  http://localhost:1000/bookings/e84da810-d0c6-4ad8-bbcf-75c2127cb9d0
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+#####
+#UPDATE BOOKING
+
+PATCH   http://localhost:1000/bookings/e84da810-d0c6-4ad8-bbcf-75c2127cb9d0
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+Content-Type: application/json
+
+{
+    "userid": "6632cf9d-0d90-4dfa-ae95-be7fd5fdcd00",
+    "tourid": "0b8e5753-8821-4316-baf8-dbb21910d245",
+    "hotelid": "9279b14f-9e1b-4709-852a-025b807c0251",
+    "bstartdate": "2024-06-20",
+    "benddate": "2024-06-30",
+    "bookingdate": "2024-06-17",
+    "bguests": 5,
+    "bstatus": "Pending",
+    "bEmailSent": 0
+}
+
+#####
+#DELETE BOOKING
+
+DELETE  http://localhost:1000/bookings/e84da810-d0c6-4ad8-bbcf-75c2127cb9d0
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzY4NDRkMy1iOWEzLTQ5Y2MtOWM4OS01OGEzYjJhYTNiMzUiLCJ1c2VybmFtZSI6IkphbWVzIiwiaXNBZG1pbiI6MSwiaWF0IjoxNzE4NjEyMTE2LCJleHAiOjE3MTg2NDgxMTZ9.-iT9CzSMbLL3mgtMR1fmEDHKMfcQkghhMNPW4UCGJhk
+
+
+######
+#================================================================================================

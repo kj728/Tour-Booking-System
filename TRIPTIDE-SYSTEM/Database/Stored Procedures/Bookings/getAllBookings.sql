@@ -1,0 +1,8 @@
+USE TRIPTIDE;
+GO
+
+CREATE OR ALTER PROCEDURE getAllBookings
+AS
+BEGIN
+    SELECT * FROM bookings WHERE isDeleted !=1
+END
